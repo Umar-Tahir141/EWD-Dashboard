@@ -37,7 +37,7 @@ export default function BookingChannelChart({ channels }) {
     <div className="booking-chart-card">
       <div className="booking-chart-header">
         <h3 className="chart-title">Bookings by channel</h3>
-        <select className="period-select">
+        <select className="rc-select">
           <option>This month</option>
           <option>Last month</option>
           <option>Last 3 months</option>
