@@ -1,0 +1,138 @@
+.guest-table-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  animation: slideUp 0.5s 0.2s ease both;
+}
+
+.guest-table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.guest-table-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.guest-table-title h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.guest-count {
+  font-size: 11px;
+  font-weight: 700;
+  width:23px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.view-all-btn {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  transition: background var(--transition-fast);
+}
+
+.view-all-btn:hover { background: var(--color-primary-light); }
+
+/* Table */
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.guest-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+  white-space: nowrap;
+}
+
+.guest-table thead th {
+  padding: 10px 12px 10px 20px;
+  text-align: left;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  color: var(--color-text-muted);
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.guest-table thead th:first-child { padding-left: 20px; }
+
+.guest-row {
+  transition: background var(--transition-fast);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.guest-row:last-child { border-bottom: none; }
+
+.guest-row:hover { background: #FAFBFC; }
+
+.guest-row td {
+  padding: 12px 12px 12px 20px;
+  vertical-align: middle;
+}
+
+.guest-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.guest-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.guest-name {
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.property-cell {
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.time-cell {
+  color: var(--color-text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.channel-badge,
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}

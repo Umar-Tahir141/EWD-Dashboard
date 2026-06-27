@@ -1,0 +1,81 @@
+.booking-chart-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  border: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-sm);
+  animation: slideUp 0.5s 0.1s ease both;
+  min-height: 395px;
+}
+
+.booking-chart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.booking-chart-body {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.donut-wrapper {
+  flex-shrink: 0;
+}
+
+.donut-svg {
+  display: block;
+  overflow: visible;
+}
+
+/* Legend */
+.channel-legend {
+  list-style: none;
+  flex: 1;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.channel-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 4px 6px;
+  transition: background var(--transition-fast);
+}
+
+.channel-item:hover,
+.channel-item.active {
+  background: var(--color-bg);
+}
+
+.channel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.channel-name {
+  font-size: 12.5px;
+  color: var(--color-text-secondary);
+  flex: 1;
+}
+
+.channel-pct {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.channel-count {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}

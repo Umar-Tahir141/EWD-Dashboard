@@ -1,0 +1,206 @@
+/* ── Card ── */
+.rc-card {
+  background: var(--color-surface, #fff);
+  border-radius: var(--radius-md, 12px);
+  padding: 16px 20px 14px;
+  border: 1px solid var(--color-border-light, #E8EBF0);
+  box-shadow: var(--shadow-sm, 0 1px 4px rgba(0,0,0,0.06));
+  min-height: 395px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+/* ── Header ── */
+.rc-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.rc-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.rc-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-primary, #111827);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.rc-sub {
+  font-size: 10px;
+  color: var(--color-text-muted, #9EA5B5);
+  margin: 0;
+}
+
+.rc-header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* ── Legend ── */
+.rc-legend {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  color: var(--color-text-secondary, #6B7280);
+  white-space: nowrap;
+}
+
+.rc-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #1a2744;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.rc-dash {
+  display: inline-block;
+  width: 16px;
+  height: 0;
+  border-top: 2px dashed #F87171;
+  flex-shrink: 0;
+}
+
+.rc-legend-label {
+  margin-right: 2px;
+  font-size: 10px;
+}
+
+/* ── Select ── */
+.rc-select {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  color: var(--color-text-secondary, #6B7280);
+  background: var(--color-bg, #fff);
+  border: 1px solid var(--color-border, #E8EBF0);
+  border-radius: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+  outline: none;
+  flex-shrink: 0;
+  transition: border-color 0.15s;
+}
+.rc-select:hover {
+  border-color: var(--color-primary, #6C63FF);
+}
+
+/* ── Chart ── */
+.rc-chart-wrap {
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+}
+
+.rc-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+/* ── Footer ── */
+.rc-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--color-text-secondary, #6B7280);
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--color-border-light, #E8EBF0);
+}
+
+.rc-footer strong {
+  color: var(--color-text-primary, #111827);
+  font-weight: 600;
+}
+
+/* ── Responsive: tablet ── */
+@media (max-width: 768px) {
+  .rc-card {
+    padding: 14px 16px 12px;
+    min-height: 360px;
+  }
+
+  .rc-title {
+    font-size: 12px;
+  }
+
+  .rc-legend {
+    font-size: 10px;
+    gap: 4px;
+  }
+
+  .rc-select {
+    font-size: 10px;
+    padding: 3px 7px;
+  }
+
+  .rc-footer {
+    font-size: 11px;
+  }
+}
+
+/* ── Responsive: mobile ── */
+@media (max-width: 480px) {
+  .rc-card {
+    padding: 12px 12px 10px;
+    min-height: 320px;
+  }
+
+  .rc-header {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .rc-header-right {
+    gap: 6px;
+  }
+
+  .rc-legend-label {
+    display: none;
+  }
+
+  .rc-legend {
+    gap: 3px;
+  }
+
+  .rc-select {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+
+  .rc-footer {
+    font-size: 10px;
+    gap: 4px;
+  }
+}
+
+/* ── Responsive: very small ── */
+@media (max-width: 360px) {
+  .rc-card {
+    padding: 10px;
+    min-height: 280px;
+  }
+
+  .rc-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+}

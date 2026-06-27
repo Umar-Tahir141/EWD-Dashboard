@@ -1,0 +1,159 @@
+/* =============================================
+   NESTLY DASHBOARD — Global Styles & CSS Vars
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Brand colors */
+  --color-primary:        #6C63FF;
+  --color-primary-light:  #EEF0FF;
+  --color-primary-hover:  #5A52D5;
+  --color-accent:         #FF6584;
+  --color-success:        #4CAF50;
+  --color-warning:        #FF9800;
+  --color-danger:         #F44336;
+
+  /* Booking channel colors */
+  --color-airbnb:         #FF6B6B;
+  --color-booking:        #3B82F6;
+  --color-direct:         #F97316;
+  --color-vrbo:           #8B5CF6;
+
+  /* Neutrals */
+  --color-bg:             #F7F8FA;
+  --color-surface:        #FFFFFF;
+  --color-border:         #E8EBF0;
+  --color-border-light:   #F0F2F5;
+  --color-text-primary:   #1A1D2E;
+  --color-text-secondary: #6B7080;
+  --color-text-muted:     #9EA5B5;
+
+  /* Sidebar */
+  --sidebar-width:        240px;
+  --sidebar-bg:           #1A1D2E;
+  --sidebar-text:         #8B92A5;
+  --sidebar-text-active:  #FFFFFF;
+  --sidebar-accent:       #6C63FF;
+
+  /* Layout */
+  --header-height:        72px;
+  --content-padding:      24px;
+
+  /* Shadows */
+  --shadow-sm:            0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md:            0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg:            0 8px 24px rgba(0,0,0,0.12);
+
+  /* Radius */
+  --radius-sm:            8px;
+  --radius-md:            12px;
+  --radius-lg:            16px;
+  --radius-xl:            20px;
+
+  /* Transitions */
+  --transition-fast:      0.15s ease;
+  --transition-base:      0.25s ease;
+  --transition-slow:      0.4s ease;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  height: 100%;
+}
+
+.app-root {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ---- Main content area ---- */
+.main-content {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: margin-left var(--transition-base);
+  scroll-behavior: smooth;
+}
+
+/* ---- Mobile overlay ---- */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 99;
+  animation: fadeIn 0.2s ease;
+}
+
+/* =============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================= */
+
+/* Tablet: ≤1024px */
+@media (max-width: 1024px) {
+  :root {
+    --content-padding: 20px;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .sidebar-overlay {
+    display: block;
+  }
+}
+
+/* Mobile: ≤640px */
+@media (max-width: 640px) {
+  :root {
+    --content-padding: 16px;
+    --header-height: 60px;
+  }
+}
+
+/* ---- Animations ---- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar       { width: 6px; height: 6px; }
+::-webkit-scrollbar-track  { background: transparent; }
+::-webkit-scrollbar-thumb  { background: #CBD5E0; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #A0AEC0; }
